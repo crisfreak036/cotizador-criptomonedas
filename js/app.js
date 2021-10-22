@@ -55,9 +55,28 @@ function consultarTopTenCriptomonedas(){
         })
 }
 
-// function mostarAlerta(){
+function mostarAlerta( mensaje, tipo, tiempo){
+    if(!document.querySelector('.alerta-personalizada')){
 
-// }
+        // Crea un contenedor
+        const alerta = document.createElement('div');
+        
+        // Dependiendo el tipo, se agregan ciertas clases
+        if( tipo === 'error'){
+            alerta.classList.add('error', 'alerta-personalizada');
+            // Agrega contenido al contenedor
+            alerta.textContent = mensaje;
+        }
+        
+        // Agrega la alerta al HTML
+        resultado.appendChild(alerta);
+        
+        // Elimina la alerta después de n segundos
+        setTimeout(() => {
+            alerta.remove();
+        }, tiempo);
+    }
+}
 
 function cotizarCriptomoneda( moneda, criptomoneda){
 
@@ -74,7 +93,7 @@ function validarFormulario(e){
     const criptomoneda = selectorCriptomoneda.value;
 
     if( moneda === '' || criptomoneda === ''){
-        // mostarAlerta('Ambos campos son obligatorios', 'tipo', 2500);
+        mostarAlerta('Ambos campos son obligatorios', 'error', 2500);
         return;
     }
 
