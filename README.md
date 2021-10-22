@@ -14,3 +14,4 @@ Todo lo relacionado al código HTML y CSS del proyecto se le atribuye al instruc
 Existen dos opciones:
 
 1. Clonar el repositorio o descargar el contenido del repositorio para correr el proyecto de manera local.
+2. Puede ingresar al siguiente enlace [Cotizador de Criptomonedas](https://condescending-kare-a2dcd1.netlify.app)
