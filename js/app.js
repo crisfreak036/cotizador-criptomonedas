@@ -1,26 +1,10 @@
 import * as UI from './interfaz.js'
 
-// Código del instructor
-// const objBusqueda = {
-//     moneda: '',
-//     criptomoneda: ''
-// };
-
 
 window.onload = () => {
     consultarTopTenCriptomonedas();
     formulario.addEventListener('submit', validarFormulario);
-
-    // Código del instructor
-    // selectorMoneda.addEventListener('change', leerValorSelector);
-    // selectorCriptomoneda.addEventListener('change', leerValorSelector);
 }
-
-// Código del instructor
-// function leerValorSelector(e){
-//     objBusqueda[e.target.name] = e.target.value;
-//     console.log(objBusqueda);
-// }
 
 
 function consultarTopTenCriptomonedas(){
